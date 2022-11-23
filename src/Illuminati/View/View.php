@@ -4,15 +4,15 @@ namespace Illuminati\View;
 
 class View {
 
-    public $prefix_make = "templates/";
-    public $prefix_assets = "statics/";
+    public static $prefix_make = "templates/";
+    public static $prefix_assets = "statics/";
 
-    public function assets($assets){
-        return $this -> prefix_assets . $assets;
+    public static function assets($assets){
+        return self::$prefix_assets . $assets;
     }
 
-    public function make($view){
-        return include_once($this -> prefix_make . $view . ".php");
+    public static function make($view){
+        return require_once(self::$prefix_make . $view . ".php");
     }
 
 }
