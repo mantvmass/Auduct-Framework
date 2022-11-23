@@ -1,7 +1,7 @@
 # Auduct Framework
 PHP Web Framework
 ## Installation
-**Composer**: [Download](https://getcomposer.org/download/)  
+**Composer:** [**Download**](https://getcomposer.org/download/)  
 Create file composer.json in root project and paste the example below
 ```json
 {
@@ -26,6 +26,8 @@ Your donation will help us budget to develop the framework. Thank you.
   - Dogecoin(Network: DOGE) ```DGq7QhcfQRSovVcGKotJinMNE2ki4bJWdH```
   
 ## Examples
+**Project structure:** [**Download**](https://github.com/mantvmass/Auduct-Framework)  
+**Examples:** [**See**](https://github.com/mantvmass/Auduct-Framework)  
 Routing
 ```php
   use Illuminati\Routing\Router;
@@ -64,6 +66,7 @@ Routing and view
   })
 ```
 ### Features
+This is only part
 | Class | Constructor |  Function | Parameters | Details |
 | :-------- | :--------: | ---------: | ---------: | ---------: |
 |   Router   |   null   |    route()   |    string, array, callback   | Coming soon |
