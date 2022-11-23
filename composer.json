@@ -2,7 +2,7 @@
     "name": "auduct/framework",
     "description": "The Auduct Framework.",
     "keywords": ["framework"],
-    "license": "Apache",
+    "license": "Apache-2.0",
     "authors": [
         {
             "name": "Phumin Maliwan",
