@@ -24,6 +24,46 @@ Your donation will help us budget to develop the framework. Thank you.
   - BNB(Network: BEP20) ```0x2d0db066a033361bcb709976104eede3443415a4```
   - Monero(Network: XMR) ```8ARwh4HUH2Z7DCAwWyEHwD5p3wsTnUX65PKdpSZqAH2deh9wsnp4pQ256HLKpxeDxwfkrLfEFSYNv5aKruED8Mi416tx6RD```
   - Dogecoin(Network: DOGE) ```DGq7QhcfQRSovVcGKotJinMNE2ki4bJWdH```
+  
+## Examples
+Routing
+```php
+  use Illuminati\Routing\Router;
+  
+  $app = new Router();
+  $app::route("/", ["GET", "POST"], function(){
+    echo "Hello World";
+  })
+  // request url = 127.0.0.1/
+  // output Hello World
+  
+  $app::route("/hi/:name", ["GET", "POST"], function(){
+    global $app;
+    echo "Hi " . $app::params["name"];
+  })
+  // request url = 127.0.0.1/hi/Jack
+  // output Hi Jack
+  
+  $app::route("/hi", ["GET", "POST"], function(){
+    global $app;
+    echo "Hi " . $app::params["name"];
+  })
+  // request url = 127.0.0.1/hi?name=Jack
+  // output Hi Jack
+```
+Routing and view
+```php
+  use Illuminati\Routing\Router;
+  use Illuminati\View\View;
+
+  View::$prefix_make = __DIR__ . "/../templates/"; // This setting depends on your project structure.
+  $app = new Router();
+  
+  $app::route("/", ["GET", "POST"], function(){
+    return View::make("index"); // templates/index.php
+  })
+```
+
 
 ## License
 [Apache License, version 2.0](https://github.com/mantvmass/Auduct/blob/main/LICENSE.md)
