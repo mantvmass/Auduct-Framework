@@ -1,0 +1,19 @@
+{
+    "name": "auduct/framework",
+    "description": "The Auduct Framework.",
+    "keywords": ["framework"],
+    "license": "Apache",
+    "authors": [
+        {
+            "name": "Phumin Maliwan",
+            "email": "kliop2317@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Illuminati\\": "src/Illuminati"
+        }
+    },
+    "require": {}
+}
