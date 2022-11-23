@@ -63,7 +63,12 @@ Routing and view
     return View::make("index"); // templates/index.php
   })
 ```
-
+### Features
+| Class | Constructor |  Function | Parameters | Details |
+| :-------- | :--------: | ---------: | ---------: | ---------: |
+|   Router   |   null   |    route()   |    string, array, callback   | Coming soon |
+|   View   |   null   |    make()   |    string   |  Coming soon |
+|   View   |   null   |    assets()   |    string   |  Coming soon |
 
 ## License
 [Apache License, version 2.0](https://github.com/mantvmass/Auduct/blob/main/LICENSE.md)
