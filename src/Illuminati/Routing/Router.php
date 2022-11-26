@@ -147,16 +147,25 @@
                     
                     $spit_params = explode("&", $request_params);
                     for ($i=0; $i < count($spit_params); $i++) { 
-                        $KeyAndValue = explode("=", $spit_params[$i]);
-                        if (count($KeyAndValue) == 1) {
-                            self::$params += [ $spit_params[$i] => '' ];
+                        $KeyAndValue = ['',''];
+                        $counter = 0;
+                        for ($o=0; $o < strlen($spit_params[$i]); $o++){ // add key
+                            if($spit_params[$i][$o] == "="){ // first find '='
+                                break;
+                            }
+                            $KeyAndValue[0] .= $spit_params[$i][$o];
+                            $counter++;
+                        }
+                        $lens = strlen($spit_params[$i])-$counter;
+                        if ($lens <= 1 || $lens == 0) { // check value empty
+                            self::$params += [  $KeyAndValue[0] => '' ]; // add params | value empty
                             break;
                         }
-                        self::$params += [ $KeyAndValue[0] => $KeyAndValue[1] ];
+                        $KeyAndValue[1] .= substr($spit_params[$i], $counter+1); // get value
+                        self::$params += [ $KeyAndValue[0] => $KeyAndValue[1] ]; // add params
                     }
-
                     break;
-              
+
             }
            
         }
