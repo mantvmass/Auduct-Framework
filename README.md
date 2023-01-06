@@ -26,8 +26,8 @@ Your donation will help us budget to develop the framework. Thank you.
   - Dogecoin(Network: DOGE) ```DGq7QhcfQRSovVcGKotJinMNE2ki4bJWdH```
   
 ## Examples
-**Project structure:** [**Download**](https://github.com/mantvmass/Auduct-Framework)  
-**Examples:** [**See**](https://github.com/mantvmass/Auduct-Framework)  
+**Project structure:** [**Download**](https://github.com/mantvmass/auduct/archive/refs/heads/main.zip)  
+**Examples:** [**See**](https://github.com/mantvmass/auduct)  
 Routing
 ```php
   use Illuminati\Routing\Router;
