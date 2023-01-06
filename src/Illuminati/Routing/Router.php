@@ -178,7 +178,7 @@
             // access router path
             $key_param = self::processRoute($route);
             $value_param = self::processUrl($request_url);
-            self::$request_path = $value_param[0];
+            self::$request_path = $key_param[0];
             if ($key_param[0] == $value_param[0]) { return true; }
 
             $route_sub = explode("/", $key_param[0]);
